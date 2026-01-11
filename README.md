@@ -28,7 +28,9 @@ Weather-Monitoring-System-IoT/
 - Pour ouvrir la simulation :  
   1. Ouvrir Wokwi ([https://wokwi.com/](https://wokwi.com/))  
   2. Importer le fichier `.wokwi`  
-  3. Lancer la simulation  
+  3. Lancer la simulation
+ <img width="898" height="600" alt="image" src="https://github.com/user-attachments/assets/a711f06e-4871-4a53-8ce2-4767e04f60e7" />
+
 
 ---
 
@@ -42,8 +44,8 @@ Weather-Monitoring-System-IoT/
   4. Lancer le flow  
 - Accéder au Dashboard Node-RED : [http://localhost:1880/ui](http://localhost:1880/ui)  
 
-**Capture d’écran du Dashboard Node-RED :**  
-![Node-RED Dashboard](screenshots/node_red_dashboard.png)
+<img width="1856" height="710" alt="image" src="https://github.com/user-attachments/assets/e2eb897f-763f-4fa9-9c05-7353dcb10ba9" />
+
 
 ---
 
@@ -52,8 +54,8 @@ Weather-Monitoring-System-IoT/
 - Les données sont envoyées depuis Node-RED vers ThingSpeak pour **le stockage et la consultation à distance**.  
 - ThingSpeak permet de visualiser les graphiques historiques et d’analyser les mesures.  
 
-**Capture d’écran ThingSpeak :**  
-![ThingSpeak Dashboard](screenshots/thingspeak_dashboard.png)
+<img width="1068" height="710" alt="image" src="https://github.com/user-attachments/assets/bd0eee29-ec14-41fa-a437-66064f916939" />
+
 
 ---
 
