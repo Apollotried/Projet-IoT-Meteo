@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 353.8, "left": 26.4, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 142.86,
+      "left": 112.1,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 48.3,
+      "left": 426.6,
+      "attrs": { "temperature": "-10", "humidity": "87.5" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 298.6,
+      "left": -202.9,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 76.5,
+      "left": 282.5,
+      "rotate": 90,
+      "attrs": { "lux": "0.1", "threshold": "2.5", "rl10": "50", "gamma": "0.7" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 16,
+      "left": -186.4,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 253.55,
+      "left": 288,
+      "rotate": 270,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:22", "lcd1:SCL", "magenta", [ "v9.6", "h-307.2", "v-134.4" ] ],
+    [ "esp:21", "lcd1:SDA", "blue", [ "v19.2", "h-345.6", "v-153.6" ] ],
+    [ "lcd1:GND", "bb1:1b.g", "black", [ "h-48", "v345.6" ] ],
+    [ "esp:GND.1", "bb1:17b.g", "black", [ "v0" ] ],
+    [ "pot1:GND", "bb1:1b.h", "black", [ "h19.2", "v115.2" ] ],
+    [ "lcd1:VCC", "bb1:1t.e", "red", [ "h-38.4", "v345.7", "h259.2" ] ],
+    [ "ldr1:VCC", "bb1:1t.d", "red", [ "v0" ] ],
+    [ "dht1:GND", "bb1:17b.h", "black", [ "v0" ] ],
+    [ "ldr1:GND", "bb1:17b.f", "black", [ "v0" ] ],
+    [ "bb1:1b.j", "bb1:17b.j", "green", [ "v28.8", "h153.6" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v19.2", "h-220.7" ] ],
+    [ "dht1:VCC", "bb1:1t.b", "red", [ "v211.2", "h-172.8" ] ],
+    [ "bb1:1t.a", "pot1:VCC", "red", [ "v0" ] ],
+    [ "pot1:SIG", "esp:34", "green", [ "h0" ] ],
+    [ "ldr1:AO", "esp:32", "green", [ "v124.8", "h-210.5" ] ]
+  ],
+  "dependencies": {}
+}
